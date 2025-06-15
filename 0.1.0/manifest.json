@@ -1,0 +1,10 @@
+{
+	"polymod": {
+		"name": "PolyRewind",
+		"id": "polyrewind",
+		"author": "fractioneater",
+		"targets": ["0.5.0"],
+		"main": "mod.js"
+	},
+	"dependencies": []
+}
