@@ -4,20 +4,17 @@ class PolyRewind extends PolyMod {
 	init = (pml) => {
 		this.pml = pml;
 		console.log("PolyRewind says hi!");
+		this.pml.registerBindCategory("PolyRewind Mod");
+		this.pml.registerKeybind("Store", "storeFrame", "keydown", "KeyB", null, (e) => { /* If in game... */ this.storeFrame(e); });
+		this.pml.registerKeybind("Load", "loadFrame", "keydown", "KeyF", null, (e) => { /* If in game... */ this.loadFrame(e); });
 	}
 
-	postInit = () => {
-		pml.registerBindCategory("PolyRewind Mod");
-		pml.registerKeybind("Store", "storeframe", "keydown", "KeyB", callBackFunc = this.storeFrame);
-		pml.registerKeybind("Load", "loadframe", "keydown", "KeyF", callBackFunc = this.loadFrame);
-	}
-
-	storeFrame(event) {
+	storeFrame = (e) => {
 		// Hmmm.
 		console.log(this.pml);
 	}
 
-	loadFrame(event) {
+	loadFrame = (e) => {
 		// Hmmm.
 		console.log(this.pml);
 	}
